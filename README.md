@@ -1,6 +1,8 @@
 ## Overview
 This repository contains demo code for fast I2C communication on the CH552 microcontroller. A versatile controller with hardware USB support that can be bought for $0.20. The controller is not widely in use yet but some people have done alot of heavy lifting, to add to those examples this project was started.
 
+[![CH552 animation demo](Demo video)](https://youtube.com/shorts/glV4BcsJGZQ?feature=shared)
+
 ## Hardware
 The hardware used is a CH552 board from aliexpress and a monochromic 128*64 oled display from the same source. The oled display uses a SD1306 internally and is controlled by the CH552 through a heavy overclocked I2C signal.
 

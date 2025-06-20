@@ -106,12 +106,17 @@ void main(void) {
     circles[i].y = prng_max(50) + 16;
   }
 
-
   
   while(1){
     // Draw to video buffer
     gfx_clear(&video_buffer, 0x00);
     gfx_draw_text(&video_buffer, 4, 16, "RR1993 OLED Demo");
+    gfx_draw_pixel_repeated(&video_buffer, 0, 0, RIGHT, video_buffer.width);
+    gfx_draw_pixel_repeated(&video_buffer, 15, 0, RIGHT, video_buffer.width);
+    gfx_draw_pixel_repeated(&video_buffer, video_buffer.height -1, 0, RIGHT, video_buffer.width);
+    gfx_draw_pixel_repeated(&video_buffer, 0, 0, DOWN, video_buffer.height);
+    gfx_draw_pixel_repeated(&video_buffer, 0, video_buffer.width-1, DOWN, video_buffer.height);
+    gfx_draw_pixel(&video_buffer, 0, 1);
 
 
     for(uint8_t  i = 0; i < NUMBER_OF_CIRCLES; i++){
